@@ -8,9 +8,9 @@ Sistema para apresentação de controle de Escala de Domingo
 O objetivo desse projeto é construir uma aplicação web para mostrar a escala de trabalho de alguns funcionários aos domingos.
 
 Cada funcionário precisa trabalhar um número de domingos seguidos antes de ter uma folga obrigatória. Esse número é chamado de ciclo. Exemplos:
-• Ciclo 2 (ou 2x1): trabalha 2 domingos seguidos, folga 1, depois repete
-• Ciclo 3 (ou 3x1): trabalha 3 domingos seguidos, folga 1, depois repete
-• Ciclo 0 (ou folga fixa de domingo): folga todo domingo
+Ciclo 2 (ou 2x1): trabalha 2 domingos seguidos, folga 1, depois repete
+Ciclo 3 (ou 3x1): trabalha 3 domingos seguidos, folga 1, depois repete
+Ciclo 0 (ou folga fixa de domingo): folga todo domingo
 
 A aplicação deve consumir um arquivo CSV que contém as informações dos funcionários e seus respectivos ciclos, além da data da última folga de domingo de cada um.
 Abaixo segue um descritivo das colunas do arquivo:
