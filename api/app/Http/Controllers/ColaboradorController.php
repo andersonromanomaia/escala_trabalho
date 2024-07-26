@@ -79,8 +79,6 @@ class ColaboradorController extends Controller
             $year = substr($item->ultima_folga,6,4);
             $month = substr($item->ultima_folga,3,2);
             $day = substr($item->ultima_folga,0,2);
-            $pmes = 9;
-            $pano = 2024;
             $ciclo = $item->ciclo;
             $folgas_mes = null;
 
@@ -146,11 +144,10 @@ class ColaboradorController extends Controller
 
         $dia_proxima_folga = $dia_ini;
 
-        while ($dia_proxima_folga <= $dia_ini_mes){
+        while ($dia_proxima_folga < $dia_inicial_mes){
             $dia_proxima_folga = date("Y-m-d",strtotime("+{$qtde_dias_ciclo} days",strtotime($dia_proxima_folga)));
         }
 
-        
         $count=0;
         while (($dia_proxima_folga>=$dia_ini_mes) && ($dia_proxima_folga<=$dia_fim_mes)){
             if ($dia_proxima_folga<=$dia_fim_mes){
@@ -160,9 +157,9 @@ class ColaboradorController extends Controller
             $dia_proxima_folga = date("Y-m-d",strtotime("+{$qtde_dias_ciclo} days",strtotime($dia_proxima_folga)));
         }
 
-        // if ($count==0){
-        //     $folgas[] = ["dia" => ''];
-        // }
+        if ($count==0){
+            $folgas[] = ["dia" => ''];
+        }
 
         return $folgas;
     }
